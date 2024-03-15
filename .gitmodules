@@ -1,0 +1,9 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/CStafford-14/calzone-backend.git
+[submodule "ui"]
+	path = ui
+	url = https://gitea.cam123.dev/CameronReed/Calzone-UI.git
+[submodule "websource/static"]
+	path = websource/static
+	url = https://github.com/CStafford-14/calzone-slateui.git

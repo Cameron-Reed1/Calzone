@@ -1,0 +1,12 @@
+[Unit]
+Description=calzone
+After=network.target
+
+[Service]
+WorkingDirectory=/usr/local/share/calzone/
+ExecStart=/usr/local/bin/calzone --port 80
+User=calzone
+Group=calzone
+
+[Install]
+WantedBy=multi-user.target
