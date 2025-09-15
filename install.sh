@@ -14,9 +14,6 @@ function step_end() {
 }
 
 
-curdir=$(pwd)
-
-
 printf "WARNING: On top of installing Calzone, this script will create a new user for calzone,\n"
 printf "start the systemd service for it, and set up autologin for a user named cal on tty1\n\n"
 printf "If this is not what you are expecting, you should edit this script and remove the\n"
@@ -39,9 +36,9 @@ step_end $? "Installed calzone ui"
 
 
 step_begin "Compiling calzone server"
-cd server
+pushd server
 go build -o ./calzone
-cd "${curdir}"
+popd
 step_end $? "Compiled calzone server"
 step_begin "Installing calzone server"
 sudo cp ./server/calzone /usr/local/bin/
